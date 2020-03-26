@@ -3,6 +3,7 @@
         <a class="navbar-brand text-color" href="/">TravelPlanet</a>
         @auth
             <a class="nav-item nav-link" href="/hotels">Browse Hotels</a>
+            <a href="{{route('reservations.index')}}" class="nav-item nav-link">Reservations</a>
         @endauth
     </div>
     @auth

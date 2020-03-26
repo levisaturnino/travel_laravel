@@ -4,7 +4,7 @@
 <div class="container my-5">
     <div class="card">
         <div class="card-header">
-            <h2>{{ $hotelInfo->name }} - <small class="text-muted">{{ $hotelInfo->location }}</small></h2>
+            <h2><a href="{{ url()->previous() }}" class="btn btn-sm btn-success">back</a>  {{ $hotelInfo->name }} - <small class="text-muted">{{ $hotelInfo->location }}</small></h2>
         </div>
         <div class="card-body">
             <h5 class="card-title"></h5>

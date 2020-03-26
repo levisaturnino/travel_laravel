@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card my-5">
         <div class="card-header">
-            <h2>Youre all booked for the {{ $hotelInfo->name }} in {{ $hotelInfo->location }}!</h2>
+            <h2> <a href="{{route('reservations.index')}}" class="btn btn-sm btn-primary">back</a> Youre all booked for the {{ $hotelInfo->name }} in {{ $hotelInfo->location }}!</h2>
         </div>
         <div class="card-body">
             <div class="card-body">

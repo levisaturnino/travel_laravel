@@ -47,10 +47,9 @@ class ReservationController extends Controller
     {
       $request->request->add(['user_id' => Auth::user()->id]);
 
-      if ($request->departure > $request->arrival) {
-        return  redirect('dashboard.reservationCreate')->with('error', 'data inválida');
+      if ($request->departure < $request->arrival) {
+        return  back()->with('error', 'data inválida');
       }
-
       Reservation::create($request->all());
 
       return redirect('dashboard/reservations')->with('success', 'Reservation created!');
@@ -101,7 +100,6 @@ class ReservationController extends Controller
 
         if ($request->departure < $request->arrival) {
             return  back()->with('error', 'data inválida');
-
           }
 
         $data = $request->all();
